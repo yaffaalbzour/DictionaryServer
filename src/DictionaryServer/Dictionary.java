@@ -33,33 +33,28 @@ public class Dictionary
                 
             case SENDMEAN:
                 if (dictionary.containsKey(wordToSearch)) 
-                {
-                    meaning=dictionary.get(wordToSearch.toLowerCase());////return this
+                {   meaning=dictionary.get(wordToSearch.toLowerCase());////return this
                     theOutput = meaning+".Would you like to search for another word?[y/n]";
                     state = ANOTHER;
                     break;
-                    } 
-                else 
-                {
-                   theOutput = "Sorry, the dictionarry doesn't contain this word!!";
+                } 
+                else    
+                {   theOutput = "Sorry, the dictionarry doesn't contain this word!!";
                     state = WAITING;
-                   break;
+                    break;
                }  
-                
                 
             case ANOTHER:
                 if (wordToSearch.equalsIgnoreCase("n")) 
-                {
-                    theOutput = "Bye.";break;
+                {   theOutput = "Bye.";
+                    break;
                 } 
                 else 
-                {
-                    theOutput = "Press Enter";
+                {   theOutput = "Press Enter";
                     state = WAITING;break;
                     
                 }   
-                
-                
+               
             default:
                 break;
         }
