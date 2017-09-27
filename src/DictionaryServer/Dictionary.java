@@ -18,7 +18,7 @@ public class Dictionary
         dictionary.put("trust","belief");dictionary.put("intelligent","clever");dictionary.put("rub","strok");
         dictionary.put("feed","give food to");dictionary.put("strange","foreign");dictionary.put("dangerous","unsafe");
         dictionary.put("land","ground");dictionary.put("adult","mature");dictionary.put("warning","caution");
-        dictionary.put("deaf","unable to hear");dictionary.put("direction","way");dictionary.put("bee","insrct");
+        dictionary.put("deaf","unable to hear");dictionary.put("direction","way");dictionary.put("bee","insect");
         dictionary.put("blind","unable to see");
         
         String theOutput = null;
@@ -35,15 +35,16 @@ public class Dictionary
                 if (dictionary.containsKey(wordToSearch)) 
                 {
                     meaning=dictionary.get(wordToSearch.toLowerCase());////return this
-                    theOutput = meaning+"\nWould you like to search for another word?[y/n]";
+                    theOutput = meaning+".Would you like to search for another word?[y/n]";
                     state = ANOTHER;
                     break;
                     } 
                 else 
                 {
-                    theOutput = "Sorry, the dictionarry doesn't contain this word!!";
-                    state = WAITING;break;
-                }  
+                   theOutput = "Sorry, the dictionarry doesn't contain this word!!";
+                    state = WAITING;
+                   break;
+               }  
                 
                 
             case ANOTHER:

@@ -25,12 +25,15 @@ public class Server {
             while ((word = in.readLine()) != null) {
                 meaning = result.processInput(word);
                 out.println(meaning);
-                if (meaning.equals("Bye."))
+                if (meaning.equals("Bye.")){
+                    clientSocket.close();
                     break;
+                }
             }
         } catch (IOException e) {
             System.out.println("Error in connection attempt.");
             System.out.println(e.getMessage());
         }
+        
     }
 }
