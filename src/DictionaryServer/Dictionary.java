@@ -52,7 +52,6 @@ public class Dictionary
                 else 
                 {   theOutput = "Press Enter";
                     state = WAITING;break;
-                    
                 }   
                
             default:
