@@ -1,4 +1,4 @@
-package knockknockserver;
+package DictionaryServer;
 
 import java.net.*;
 import java.io.*;
